@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }   
+        p{
+            font-size: 3rem;
+        }   
+    </style>
+    
+</head>
+<body>
+    <p id="date"></p>
+    <script>
+        function time(){ 
+            let date = document.querySelector("#date");
+            const d = new Date();
+            date.innerHTML = d.toLocaleTimeString();
+        }
+        setInterval(time,1000);
+    </script>
+</body>
+</html>

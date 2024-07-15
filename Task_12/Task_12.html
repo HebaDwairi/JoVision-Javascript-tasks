@@ -17,22 +17,37 @@
     <script>
         function createPopup(){
             const Data = createObject();
-            alert("Your name is : " + Data.userName + "\n"+
+            const valid = checkInput(Data);
+            if(valid){
+                alert("Your name is : " + Data.userName + "\n"+
                   "Your age is : " + Data.userAge + "\n" +
                   "The time you clicked the button : "+ Data.timeStamp
-            );
+                );
+            }
         }
         function createObject(){
-            const name = document.querySelector("#name");
-            const age  = document.querySelector("#age");
+            const name = document.querySelector("#name").value;
+            const age  = document.querySelector("#age").value;
             const time = Date();
-
+            
             const Data = {
-                userName : name.value,
-                userAge : age.value,
+                userName : name,
+                userAge : age,
                 timeStamp : time
             }
             return Data;
+        }
+        function checkInput(Data){
+            let valid = true;
+            if(isNaN(Data.userAge) || Data.userAge == ''){
+                alert("enter a valid age")
+                valid = false;
+            }
+            if(Data.userName ==''){
+                alert("enter a valid name")
+                valid = false;
+            }
+            return valid;
         }
     </script>
 </body>

@@ -4,46 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task5</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        button{
-            border: none;
-            background-color: rgb(27, 97, 37);
-            color: white;
-            padding: 1rem;
-            font-size: 1.5rem;
-            border-radius: 6px;
-            
-        }
-        button:hover{
-            background-color: rgb(27, 46, 25);
-           
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <button onclick="printSum()">Click me</button>
     <script>
         function printSum(){
             let arr = [];
-            for( let i=0;i<=100;i++){
-                arr.push(i);
-            }
             let sum = 0;
             for( let i=0;i<=100;i++){
+                arr.push(i);
                 if(arr[i]%2==0){
                     sum += arr[i];
                 }
             }
             console.log(sum);
         }
-
     </script>
 </body>
 </html>

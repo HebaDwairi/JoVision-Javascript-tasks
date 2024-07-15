@@ -14,9 +14,9 @@
 
     <script>
         async function createPopup(){
-            const name = document.querySelector("#name");
-            const age = await getAge(name.value); 
-            alert("Your name is : " + name.value + "\n"+
+            const name = document.querySelector("#name").value;
+            const age = await getAge(name); 
+            alert("Your name is : " + name + "\n"+
                   "Your age is : " + age 
             );
         }

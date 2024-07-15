@@ -47,6 +47,7 @@ function four(arr){
 }
 function five(arr){
     shuffleArray(arr);
+    console.log(arr);
     arr.sort(function(a, b){return b - a});
     console.log(arr);
 }
